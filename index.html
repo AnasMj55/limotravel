@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"></head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
 <!-- ═══════════════════════════════════════════════════════ HEADER -->
@@ -15,12 +16,12 @@
     <a href="#hero" class="logo">QBLIMO</a>
 
     <nav>
-        <a href="#services">Menu</a>
-        <a href="#pricing">Fee</a>
-        <a href="#fleet">Cars</a>
-        <a href="#access">Access &amp; Info</a>
-        <a href="#contact">Contact</a>
-        <a href="#" class="nav-lang">JP</a>
+        <a href="#services" data-i18n="nav.menu">Menu</a>
+        <a href="#pricing"  data-i18n="nav.fee">Fee</a>
+        <a href="#fleet"    data-i18n="nav.cars">Cars</a>
+        <a href="#access"   data-i18n="nav.access">Access &amp; Info</a>
+        <a href="#contact"  data-i18n="nav.contact">Contact</a>
+        <a href="#" class="nav-lang" id="langToggle">JP</a>
     </nav>
 
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
@@ -31,12 +32,12 @@
 <!-- Mobile nav overlay -->
 <div class="mobile-nav" id="mobileNav">
     <button class="close-btn" id="closeNavBtn">✕</button>
-    <a href="#services"  class="mob">Menu</a>
-    <a href="#pricing"   class="mob">Fee</a>
-    <a href="#fleet"     class="mob">Cars</a>
-    <a href="#access"    class="mob">Access &amp; Info</a>
-    <a href="#contact"   class="mob">Contact</a>
-    <a href="#" style="font-size:0.9rem;letter-spacing:0.35em;color:var(--gold);font-family:var(--font-b);">EN | JP</a>
+    <a href="#services" class="mob" data-i18n="nav.menu">Menu</a>
+    <a href="#pricing"  class="mob" data-i18n="nav.fee">Fee</a>
+    <a href="#fleet"    class="mob" data-i18n="nav.cars">Cars</a>
+    <a href="#access"   class="mob" data-i18n="nav.access">Access &amp; Info</a>
+    <a href="#contact"  class="mob" data-i18n="nav.contact">Contact</a>
+    <a href="#" style="font-size:0.9rem;letter-spacing:0.35em;color:var(--gold);font-family:var(--font-b);" id="mobileLangToggle">EN | JP</a>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ HERO -->
@@ -46,17 +47,16 @@
     <div class="hero-orb"></div>
 
     <div class="hero-content">
-        <p class="hero-eyebrow">Tokyo Premium Limousine Service</p>
-        <h1 class="hero-title">The Art of<br><em>Exceptional</em> Travel</h1>
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Tokyo Premium Limousine Service</p>
+        <h1 class="hero-title" data-i18n="hero.title">The Art of<br><em>Exceptional</em> Travel</h1>
         <div class="hero-rule"></div>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="hero.sub">
             We place the utmost priority on customer safety as the key of all our services — experiencing travel with all five senses, through genuine Japanese hospitality and Omotenashi.
         </p>
-        <a href="#contact" class="hero-cta"><span>Reserve Now</span></a>
+        <a href="#contact" class="hero-cta"><span data-i18n="hero.cta">Reserve Now</span></a>
     </div>
 
     <div class="hero-scroll-indicator">
-        <span>Scroll</span>
         <div class="scroll-bar"></div>
     </div>
 </section>
@@ -66,13 +66,12 @@
 <!-- ═══════════════════════════════════════════════════════ SERVICES -->
 <section id="services">
     <div class="inner">
-        <p class="s-label reveal">Our Services</p>
-        <h2 class="s-title reveal d1">Tailored for Every<br><em>Journey</em></h2>
+        <p class="s-label reveal" data-i18n="svc.label">Our Services</p>
+        <h2 class="s-title reveal d1" data-i18n="svc.title">Tailored for Every<br><em>Journey</em></h2>
         <div class="gold-rule reveal d2"></div>
 
         <div class="services-wrap">
 
-            <!-- Airport -->
             <div class="svc reveal d1">
                 <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6 34l4-12h28l4 12H6z"/>
@@ -84,11 +83,10 @@
                     <line x1="19" y1="10" x2="19" y2="14"/>
                     <line x1="29" y1="10" x2="29" y2="14"/>
                 </svg>
-                <h3>Airport Transfers</h3>
-                <p>Seamless connections to Narita &amp; Haneda International Airports with professional meet &amp; greet service.</p>
+                <h3 data-i18n="svc.airport.h3">Airport Transfers</h3>
+                <p data-i18n="svc.airport.p">Seamless connections to Narita &amp; Haneda International Airports with professional meet &amp; greet service.</p>
             </div>
 
-            <!-- Private -->
             <div class="svc reveal d2">
                 <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="4" y="18" width="40" height="20" rx="2"/>
@@ -97,11 +95,10 @@
                     <circle cx="15" cy="32" r="2"/>
                     <circle cx="33" cy="32" r="2"/>
                 </svg>
-                <h3>Private Charter</h3>
-                <p>Exclusive vehicle hire for business engagements, corporate events, and private occasions requiring discretion.</p>
+                <h3 data-i18n="svc.private.h3">Private Charter</h3>
+                <p data-i18n="svc.private.p">Exclusive vehicle hire for business engagements, corporate events, and private occasions requiring discretion.</p>
             </div>
 
-            <!-- Tourist -->
             <div class="svc reveal d3">
                 <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="24" cy="18" r="7"/>
@@ -112,11 +109,10 @@
                     <path d="M8 24H4"/>
                     <path d="M11.8 11.8l2.8 2.8"/>
                 </svg>
-                <h3>Tourist Charter</h3>
-                <p>Curated exploration of Japan's cultural landmarks and hidden gems, guided by local expertise and the spirit of Omotenashi.</p>
+                <h3 data-i18n="svc.tourist.h3">Tourist Charter</h3>
+                <p data-i18n="svc.tourist.p">Curated exploration of Japan's cultural landmarks and hidden gems, guided by local expertise and the spirit of Omotenashi.</p>
             </div>
 
-            <!-- Golf -->
             <div class="svc reveal d4">
                 <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="24" y1="6" x2="24" y2="34"/>
@@ -124,8 +120,8 @@
                     <path d="M24 6l8 10H16l8-10z"/>
                     <line x1="8" y1="44" x2="40" y2="44"/>
                 </svg>
-                <h3>Golf Transfers</h3>
-                <p>Premium transportation to premier golf courses with ample space for equipment and a relaxed, unhurried pace.</p>
+                <h3 data-i18n="svc.golf.h3">Golf Transfers</h3>
+                <p data-i18n="svc.golf.p">Premium transportation to premier golf courses with ample space for equipment and a relaxed, unhurried pace.</p>
             </div>
 
         </div>
@@ -137,30 +133,31 @@
 <!-- ═══════════════════════════════════════════════════════ FLEET -->
 <section id="fleet">
     <div class="inner">
-        <p class="s-label reveal">Our Fleet</p>
-        <h2 class="s-title reveal d1">Vehicles of<br><em>Distinction</em></h2>
+        <p class="s-label reveal" data-i18n="fleet.label">Our Fleet</p>
+        <h2 class="s-title reveal d1" data-i18n="fleet.title">Vehicles of<br><em>Distinction</em></h2>
         <div class="gold-rule reveal d2"></div>
 
         <div class="fleet-wrap">
 
             <div class="fleet-card reveal d1">
                 <div class="fleet-num">01</div>
+                <img src="mercedes-s.png" alt="Mercedes-Benz S-Class" class="fleet-img">
                 <p class="fleet-brand">Mercedes-Benz</p>
                 <h3>S-Class</h3>
                 <div class="fleet-specs">
                     <div class="spec-item">
-                        <span class="spec-lbl">Capacity</span>
+                        <span class="spec-lbl" data-i18n="spec.capacity">Capacity</span>
                         <span class="spec-val">4</span>
-                        <span class="spec-note">Recommended 2</span>
+                        <span class="spec-note" data-i18n="spec.rec2">Recommended 2</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Luggage</span>
+                        <span class="spec-lbl" data-i18n="spec.luggage">Luggage</span>
                         <span class="spec-val">2</span>
-                        <span class="spec-note">Suitcases</span>
+                        <span class="spec-note" data-i18n="spec.suitcases">Suitcases</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Class</span>
-                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem">Executive</span>
+                        <span class="spec-lbl" data-i18n="spec.class">Class</span>
+                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem" data-i18n="class.executive">Executive</span>
                     </div>
                 </div>
             </div>
@@ -171,18 +168,18 @@
                 <h3>V220d</h3>
                 <div class="fleet-specs">
                     <div class="spec-item">
-                        <span class="spec-lbl">Capacity</span>
+                        <span class="spec-lbl" data-i18n="spec.capacity">Capacity</span>
                         <span class="spec-val">6</span>
-                        <span class="spec-note">Recommended 5</span>
+                        <span class="spec-note" data-i18n="spec.rec5">Recommended 5</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Luggage</span>
+                        <span class="spec-lbl" data-i18n="spec.luggage">Luggage</span>
                         <span class="spec-val">4</span>
-                        <span class="spec-note">Suitcases</span>
+                        <span class="spec-note" data-i18n="spec.suitcases">Suitcases</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Class</span>
-                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem">Group</span>
+                        <span class="spec-lbl" data-i18n="spec.class">Class</span>
+                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem" data-i18n="class.group">Group</span>
                     </div>
                 </div>
             </div>
@@ -193,18 +190,18 @@
                 <h3>Alphard</h3>
                 <div class="fleet-specs">
                     <div class="spec-item">
-                        <span class="spec-lbl">Capacity</span>
+                        <span class="spec-lbl" data-i18n="spec.capacity">Capacity</span>
                         <span class="spec-val">6</span>
-                        <span class="spec-note">Recommended 5</span>
+                        <span class="spec-note" data-i18n="spec.rec5">Recommended 5</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Luggage</span>
+                        <span class="spec-lbl" data-i18n="spec.luggage">Luggage</span>
                         <span class="spec-val">4</span>
-                        <span class="spec-note">Suitcases</span>
+                        <span class="spec-note" data-i18n="spec.suitcases">Suitcases</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Class</span>
-                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem">Premium</span>
+                        <span class="spec-lbl" data-i18n="spec.class">Class</span>
+                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem" data-i18n="class.premium">Premium</span>
                     </div>
                 </div>
             </div>
@@ -215,18 +212,18 @@
                 <h3>HIACE Fine Tech Tourer</h3>
                 <div class="fleet-specs">
                     <div class="spec-item">
-                        <span class="spec-lbl">Capacity</span>
+                        <span class="spec-lbl" data-i18n="spec.capacity">Capacity</span>
                         <span class="spec-val">9</span>
-                        <span class="spec-note">Recommended 8</span>
+                        <span class="spec-note" data-i18n="spec.rec8">Recommended 8</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Luggage</span>
+                        <span class="spec-lbl" data-i18n="spec.luggage">Luggage</span>
                         <span class="spec-val">6</span>
-                        <span class="spec-note">Suitcases</span>
+                        <span class="spec-note" data-i18n="spec.suitcases">Suitcases</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-lbl">Class</span>
-                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem">Grand</span>
+                        <span class="spec-lbl" data-i18n="spec.class">Class</span>
+                        <span class="spec-val" style="font-size:1rem;padding-top:0.35rem" data-i18n="class.grand">Grand</span>
                     </div>
                 </div>
             </div>
@@ -240,57 +237,53 @@
 <!-- ═══════════════════════════════════════════════════════ PRICING -->
 <section id="pricing">
     <div class="inner">
-        <p class="s-label reveal">Rates</p>
-        <h2 class="s-title reveal d1">Transparent<br><em>Pricing</em></h2>
+        <p class="s-label reveal" data-i18n="pricing.label">Rates</p>
+        <h2 class="s-title reveal d1" data-i18n="pricing.title">Transparent<br><em>Pricing</em></h2>
         <div class="gold-rule reveal d2"></div>
-        <p class="tax-note reveal d3">All prices include consumption tax.</p>
+        <p class="tax-note reveal d3" data-i18n="pricing.tax">All prices include consumption tax.</p>
 
         <div class="pricing-grid">
 
-            <!-- Time -->
             <div class="p-card reveal d1">
-                <p class="p-route">Time Charter</p>
-                <p class="p-desc">Hourly Reservation</p>
+                <p class="p-route" data-i18n="pricing.time.route">Time Charter</p>
+                <p class="p-desc"  data-i18n="pricing.time.desc">Hourly Reservation</p>
                 <div class="p-amount"><span class="cur">¥</span>17,600</div>
-                <p class="p-note">Starting from · 2 hours / 30 km</p>
-                <div class="p-details">
+                <p class="p-note"  data-i18n="pricing.time.note">Starting from · 2 hours / 30 km</p>
+                <div class="p-details" data-i18n="pricing.time.details">
                     Extension rate:<br>
                     ¥4,400 per 30 min / 7.5 km<br><br>
                     Additional charges may apply for pick-up outside Tokyo's 23 wards.
                 </div>
             </div>
 
-            <!-- Narita -->
             <div class="p-card reveal d2">
-                <p class="p-route">Airport Transfer</p>
-                <p class="p-desc">Narita Airport</p>
+                <p class="p-route" data-i18n="pricing.airport.route">Airport Transfer</p>
+                <p class="p-desc"  data-i18n="pricing.narita.desc">Narita Airport</p>
                 <div class="p-amount"><span class="cur">¥</span>46,200</div>
-                <p class="p-note">Narita → Tokyo 23 Wards</p>
-                <div class="p-details">
+                <p class="p-note"  data-i18n="pricing.narita.note">Narita → Tokyo 23 Wards</p>
+                <div class="p-details" data-i18n="pricing.narita.details">
                     Tokyo 23 Wards → Narita:<br>
                     <strong style="color:var(--white)">¥39,600</strong>
                 </div>
             </div>
 
-            <!-- Haneda -->
             <div class="p-card featured reveal d3">
-                <p class="p-route">Airport Transfer</p>
-                <p class="p-desc">Haneda Airport</p>
+                <p class="p-route" data-i18n="pricing.airport.route">Airport Transfer</p>
+                <p class="p-desc"  data-i18n="pricing.haneda.desc">Haneda Airport</p>
                 <div class="p-amount"><span class="cur">¥</span>27,500</div>
-                <p class="p-note">Haneda → Tokyo 23 Wards</p>
-                <div class="p-details">
+                <p class="p-note"  data-i18n="pricing.haneda.note">Haneda → Tokyo 23 Wards</p>
+                <div class="p-details" data-i18n="pricing.haneda.details">
                     Tokyo 23 Wards → Haneda:<br>
                     <strong style="color:var(--white)">¥22,000</strong>
                 </div>
             </div>
 
-            <!-- Custom -->
             <div class="p-card wide reveal d1">
-                <p class="p-route">Bespoke</p>
-                <p class="p-desc">Golf &amp; Tourist Charters</p>
-                <div class="p-custom-label">Custom Quote</div>
-                <p class="p-note">Tailored pricing based on destination and requirements</p>
-                <div class="p-details">
+                <p class="p-route"      data-i18n="pricing.custom.route">Bespoke</p>
+                <p class="p-desc"       data-i18n="pricing.custom.desc">Golf &amp; Tourist Charters</p>
+                <div class="p-custom-label" data-i18n="pricing.custom.label">Custom Quote</div>
+                <p class="p-note"       data-i18n="pricing.custom.note">Tailored pricing based on destination and requirements</p>
+                <div class="p-details"  data-i18n="pricing.custom.details">
                     Contact us for full-day excursions, multi-stop itineraries, or extended travel packages. Our team will craft a solution exactly suited to your schedule.
                 </div>
             </div>
@@ -298,11 +291,11 @@
         </div>
 
         <div class="cancel-box reveal">
-            <h4>Cancellation Policy</h4>
+            <h4 data-i18n="cancel.h4">Cancellation Policy</h4>
             <ul>
-                <li>Cancellation 1 day prior to reservation — 50% cancellation fee</li>
-                <li>Cancellation on the day of reservation — 100% cancellation fee</li>
-                <li>Additional surcharges apply for pick-up locations outside Tokyo's 23 wards</li>
+                <li data-i18n="cancel.li1">Cancellation 1 day prior to reservation — 50% cancellation fee</li>
+                <li data-i18n="cancel.li2">Cancellation on the day of reservation — 100% cancellation fee</li>
+                <li data-i18n="cancel.li3">Additional surcharges apply for pick-up locations outside Tokyo's 23 wards</li>
             </ul>
         </div>
     </div>
@@ -313,50 +306,50 @@
 <!-- ═══════════════════════════════════════════════════════ ACCESS & INFO -->
 <section id="access">
     <div class="inner">
-        <p class="s-label reveal">Company</p>
-        <h2 class="s-title reveal d1">Access &amp;<br><em>Information</em></h2>
+        <p class="s-label reveal" data-i18n="access.label">Company</p>
+        <h2 class="s-title reveal d1" data-i18n="access.title">Access &amp;<br><em>Information</em></h2>
         <div class="gold-rule reveal d2"></div>
 
         <div class="access-grid">
             <div class="reveal d1">
-                <p class="co-name">B Plus Trading Co., Ltd.</p>
+                <p class="co-name" data-i18n="access.coname">B Plus Trading Co., Ltd.</p>
                 <table class="info-tbl">
                     <tr>
-                        <td>Address</td>
-                        <td>1-13-10 Shinjuku, Katsushika-ku,<br>Tokyo 125-0051</td>
+                        <td data-i18n="access.addr.lbl">Address</td>
+                        <td data-i18n="access.addr.val">1-13-10 Shinjuku, Katsushika-ku,<br>Tokyo 125-0051</td>
                     </tr>
                     <tr>
-                        <td>Established</td>
-                        <td>May 7, 2020</td>
+                        <td data-i18n="access.est.lbl">Established</td>
+                        <td data-i18n="access.est.val">May 7, 2020</td>
                     </tr>
                     <tr>
-                        <td>Capital</td>
-                        <td>86.32 million yen</td>
+                        <td data-i18n="access.cap.lbl">Capital</td>
+                        <td data-i18n="access.cap.val">86.32 million yen</td>
                     </tr>
                     <tr>
-                        <td>Director</td>
-                        <td>Fumikazu Murayama</td>
+                        <td data-i18n="access.dir.lbl">Director</td>
+                        <td data-i18n="access.dir.val">Fumikazu Murayama</td>
                     </tr>
                     <tr>
-                        <td>Business</td>
-                        <td>General passenger automobile transportation (limousine operation)</td>
+                        <td data-i18n="access.biz.lbl">Business</td>
+                        <td data-i18n="access.biz.val">General passenger automobile transportation (limousine operation)</td>
                     </tr>
                     <tr>
-                        <td>Banks</td>
-                        <td>Mizuho Bank &nbsp;·&nbsp; Mitsubishi UFJ Bank</td>
+                        <td data-i18n="access.banks.lbl">Banks</td>
+                        <td data-i18n="access.banks.val">Mizuho Bank &nbsp;·&nbsp; Mitsubishi UFJ Bank</td>
                     </tr>
                 </table>
             </div>
 
             <div class="contact-block reveal d2">
-                <h3>Get in Touch</h3>
+                <h3 data-i18n="access.touch.h3">Get in Touch</h3>
 
                 <div class="c-item">
                     <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                     </svg>
                     <div>
-                        <p class="c-lbl">Phone</p>
+                        <p class="c-lbl" data-i18n="access.phone.lbl">Phone</p>
                         <p class="c-val">+81-3-5672-9530</p>
                     </div>
                 </div>
@@ -367,7 +360,7 @@
                         <path d="M22 7l-10 7L2 7"/>
                     </svg>
                     <div>
-                        <p class="c-lbl">Email</p>
+                        <p class="c-lbl" data-i18n="access.email.lbl">Email</p>
                         <p class="c-val">order.qblimo@qbtcl.com</p>
                     </div>
                 </div>
@@ -378,7 +371,7 @@
                         <circle cx="12" cy="10" r="3"/>
                     </svg>
                     <div>
-                        <p class="c-lbl">Location</p>
+                        <p class="c-lbl" data-i18n="access.loc.lbl">Location</p>
                         <p class="c-val">Katsushika-ku, Tokyo</p>
                     </div>
                 </div>
@@ -392,7 +385,7 @@
                         <rect x="16" y="17" width="4" height="4"/>
                     </svg>
                     <div>
-                        <p class="c-lbl">Fax</p>
+                        <p class="c-lbl" data-i18n="access.fax.lbl">Fax</p>
                         <p class="c-val">+81-3-5672-9535</p>
                     </div>
                 </div>
@@ -409,13 +402,13 @@
         <div class="contact-layout">
 
             <div class="contact-copy">
-                <p class="s-label reveal">Enquiries</p>
-                <h2 class="s-title reveal d1">Make a<br><em>Reservation</em></h2>
+                <p class="s-label reveal" data-i18n="contact.label">Enquiries</p>
+                <h2 class="s-title reveal d1" data-i18n="contact.title">Make a<br><em>Reservation</em></h2>
                 <div class="gold-rule reveal d2"></div>
-                <p class="reveal d3">
+                <p class="reveal d3" data-i18n="contact.p1">
                     Our team is ready to assist with any enquiry or booking. Whether for a single airport transfer or a comprehensive travel itinerary, we will craft an experience worthy of your expectations.
                 </p>
-                <p class="reveal d4">
+                <p class="reveal d4" data-i18n="contact.p2">
                     We endeavour to respond to all enquiries within 24 hours.
                 </p>
             </div>
@@ -424,22 +417,22 @@
                 <input type="hidden" name="access_key" value="237d647c-2187-476a-b6d4-a6cd7e4c7295">
                 <input type="hidden" name="from_name" value="QBLIMO Website">
                 <div class="fg">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    <label for="name" data-i18n="contact.name.lbl">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" data-i18n-ph="contact.name.ph" required>
                 </div>
                 <div class="fg">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <label for="email" data-i18n="contact.email.lbl">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" data-i18n-ph="contact.email.ph" required>
                 </div>
                 <div class="fg">
-                    <label for="subject">Inquiry Title</label>
-                    <input type="text" id="subject" name="subject" placeholder="e.g. Airport transfer enquiry">
+                    <label for="subject" data-i18n="contact.subject.lbl">Inquiry Title</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g. Airport transfer enquiry" data-i18n-ph="contact.subject.ph">
                 </div>
                 <div class="fg">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Please describe your requirements in detail..."></textarea>
+                    <label for="message" data-i18n="contact.msg.lbl">Message</label>
+                    <textarea id="message" name="message" placeholder="Please describe your requirements in detail..." data-i18n-ph="contact.msg.ph"></textarea>
                 </div>
-                <button type="submit" class="btn-sub" id="submitBtn"><span>Send Enquiry</span></button>
+                <button type="submit" class="btn-sub" id="submitBtn"><span data-i18n="contact.submit">Send Enquiry</span></button>
             </form>
 
         </div>
@@ -450,11 +443,11 @@
 <footer>
     <div class="foot-inner">
         <div class="foot-logo">QBLIMO</div>
-        <p class="foot-copy">© 2024 QBLIMO. B Plus Trading Co., Ltd. All rights reserved.</p>
+        <p class="foot-copy" data-i18n="footer.copy">© 2024 QBLIMO. B Plus Trading Co., Ltd. All rights reserved.</p>
         <div class="foot-lang">
-            <a href="#">EN</a>
+            <a href="#" id="footerLangEN">EN</a>
             <span>|</span>
-            <a href="#">JP</a>
+            <a href="#" id="footerLangJP">JP</a>
         </div>
     </div>
 </footer>

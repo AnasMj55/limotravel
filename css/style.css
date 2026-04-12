@@ -242,7 +242,7 @@ nav a:hover::after { width: 100%; }
 }
 
 .hero-sub {
-    font-size: 0.88rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: rgba(245,240,235,0.52);
     letter-spacing: 0.07em;
@@ -492,6 +492,19 @@ section { padding: 8rem 4rem; position: relative; }
     margin-bottom: 2.2rem;
 }
 
+.fleet-img {
+    position: absolute;
+    top: 3.5rem;
+    right: 3.5rem;
+    width: 360px;
+    height: 240px;
+    object-fit: contain;
+    filter: brightness(0.88);
+    transition: filter 0.4s;
+}
+
+.fleet-card:hover .fleet-img { filter: brightness(1); }
+
 .fleet-specs {
     display: flex;
     gap: 2.5rem;
@@ -738,7 +751,7 @@ section { padding: 8rem 4rem; position: relative; }
 }
 
 .contact-copy p {
-    font-size: 0.82rem;
+    font-size: 1rem;
     color: rgba(245,240,235,0.44);
     line-height: 1.95;
     margin-top: 1.2rem;
