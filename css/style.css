@@ -57,6 +57,16 @@ body {
     letter-spacing: 0.35em;
     color: var(--gold);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 nav {
